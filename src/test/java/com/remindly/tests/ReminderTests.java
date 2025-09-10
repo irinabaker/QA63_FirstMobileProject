@@ -11,7 +11,6 @@ public class ReminderTests extends TestBase {
         app.getMainScreen().tapOnAddReminder();
         app.getReminder().enterReminderTitle("Holiday");
         app.getReminder().saveReminder();
-
         Assert.assertTrue(app.getMainScreen().isReminderTitlePresent().contains("Holiday"));
     }
 }
