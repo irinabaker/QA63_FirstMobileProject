@@ -42,4 +42,8 @@ public class AppManager {
     public ReminderHelper getReminder() {
         return reminder;
     }
+
+    public void stop() {
+        driver.quit();
+    }
 }

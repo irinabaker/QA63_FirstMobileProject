@@ -23,6 +23,14 @@ public class MainScreenHelper extends BaseHelper {
     }
 
     public String isReminderTitlePresent() {
-        return driver.findElement(By.id("recycle_title")).getText();
+        return isTextPresent(By.id("recycle_title"));
+    }
+
+    public String isReminderDateTimePresent() {
+        return isTextPresent(By.id("recycle_date_time"));
+    }
+
+    public String isTypeOfRepetitionPresent() {
+        return isTextPresent(By.id("recycle_repeat_info"));
     }
 }
