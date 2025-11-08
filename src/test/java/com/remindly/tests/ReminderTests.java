@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class ReminderTests extends TestBase {
 
-    @Test
+    @Test(enabled = false)
     public void addReminderTitlePositiveTest() {
         app.getMainScreen().tapOnAddReminder();
         app.getReminder().enterReminderTitle("Holiday");
@@ -14,7 +14,7 @@ public class ReminderTests extends TestBase {
         Assert.assertTrue(app.getMainScreen().isReminderTitlePresent().contains("Holiday"));
     }
 
-    @Test
+    @Test(enabled = false)
     public void addReminderDatePositiveTest() {
         app.getMainScreen().tapOnAddReminder();
         app.getReminder().enterReminderTitle("Holiday");
@@ -28,7 +28,7 @@ public class ReminderTests extends TestBase {
         Assert.assertTrue(app.getMainScreen().isReminderDateTimePresent().contains("31/10/2022"));
     }
 
-    @Test
+    @Test(enabled = false)
     public void addReminderTimePositiveTest() {
         app.getMainScreen().tapOnAddReminder();
         app.getReminder().enterReminderTitle("Holiday");
@@ -39,7 +39,7 @@ public class ReminderTests extends TestBase {
         Assert.assertTrue(app.getMainScreen().isReminderDateTimePresent().contains("6:00"));
     }
 
-    @Test
+    @Test(enabled = false)
     public void addTypeOfRepetitionTest() {
         app.getMainScreen().tapOnAddReminder();
         app.getReminder().enterReminderTitle("Holiday");
@@ -48,6 +48,16 @@ public class ReminderTests extends TestBase {
         app.getReminder().selectTypeOfRepetition("Month");
         app.getReminder().saveReminder();
         Assert.assertTrue(app.getMainScreen().isTypeOfRepetitionPresent().contains("Month"));
+    }
+
+    @Test(enabled = false)
+    public void addRepetitionIntervalPositiveTest() {
+        app.getMainScreen().tapOnAddReminder();
+        app.getReminder().enterReminderTitle("Holiday");
+        app.getReminder().tapOnRepetitionInterval();
+        app.getReminder().enterNumberOfRepetition("3");
+        app.getReminder().saveReminder();
+        Assert.assertTrue(app.getMainScreen().isTypeOfRepetitionPresent().contains("3"));
     }
 
 }

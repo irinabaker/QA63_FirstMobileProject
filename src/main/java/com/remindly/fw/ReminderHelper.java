@@ -105,4 +105,14 @@ public class ReminderHelper extends BaseHelper {
     public void selectTypeOfRepetition(String typeOfRep) {
         tap(By.xpath("//*[@text='" + typeOfRep + "']"));
     }
+
+    public void tapOnRepetitionInterval() {
+        tap(By.id("RepeatNo"));
+    }
+
+    public void enterNumberOfRepetition(String number) {
+        pause(500);
+        type(By.className("android.widget.EditText"),number);
+        tap(By.id("android:id/button1"));
+    }
 }
