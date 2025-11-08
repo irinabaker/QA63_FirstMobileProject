@@ -26,7 +26,7 @@ public class AppManager {
         capabilities.setCapability("deviceName","mob");
         capabilities.setCapability("appPackage","com.blanyal.remindly");
         capabilities.setCapability("appActivity","com.blanyal.remindme.MainActivity");
-        capabilities.setCapability("app","/Users/baker/mobile/remindly.apk");
+        capabilities.setCapability("app","C:/mobile/wikipedia.apk");
 
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),capabilities);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
