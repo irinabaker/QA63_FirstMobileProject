@@ -20,7 +20,7 @@ test {
 
 def registerTask(String taskName, String suitePath) {
     tasks.register(taskName,Test) {
-        estClassesDirs = sourceSets.test.output.classesDirs
+        testClassesDirs = sourceSets.test.output.classesDirs
         classpath = sourceSets.test.runtimeClasspath
         useTestNG() {
             suites suitePath
